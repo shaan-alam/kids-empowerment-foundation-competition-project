@@ -1,0 +1,105 @@
+.info__wrapper {
+  height: 200vh;
+  width: 100%;
+  background: url("../images/yellow-bg.svg") no-repeat;
+  background-size: cover;
+
+  // For pushing down the info
+  .container {
+    padding: 7rem 0;
+  }
+}
+
+// Individual info style
+.info__wrapper .info {
+  margin: 8rem 0;
+  display: flex;
+
+  @include large {
+    flex-direction: column;
+
+    &:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__leftContainer,
+  &__rightContainer {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  // Left info container text styles
+  .info__leftContainer,
+  .info__rightContainer {
+    h1 {
+      @include medium {
+        font-size: 1.5rem;
+      }
+
+      color: #fff;
+      font-family: $montserrat;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      @include medium {
+        font-size: small;
+      }
+
+      color: #fff;
+      font-family: $montserrat;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+  }
+}
+
+// info text alignment
+.info .info__leftContainer.text {
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include large {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.info .info__rightContainer.text {
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  justify-content: flex-start;
+
+  @include large {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+// info picture alignment
+.info .info__leftContainer {
+  justify-content: flex-start;
+
+  @include large {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
+}
+
+.info .info__rightContainer {
+  justify-content: flex-end;
+
+  @include large {
+    margin-top: 1.7rem;
+    justify-content: center;
+  }
+}

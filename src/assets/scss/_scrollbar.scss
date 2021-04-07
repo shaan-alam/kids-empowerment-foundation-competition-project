@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  transition: all 0.4s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($primary-color, 8%);
+}
