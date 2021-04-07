@@ -6,10 +6,10 @@ const HeroSection = () => {
     <div className="hero__wrapper">
       <div className="container">
         <div className="hero__wrapperLeft">
-          <Fade bottom duration={2000}>
+          <Fade top duration={2000}>
             <h1>Kids Empowerment Foundation</h1>
           </Fade>
-          <Fade bottom duration={2000} delay={200}>
+          <Fade top duration={2000} delay={200}>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Corporis, libero laborum. Ipsum culpa voluptates cumque, quam
@@ -17,7 +17,7 @@ const HeroSection = () => {
               quaerat. Nisi cupiditate ex quam quas?
             </p>
           </Fade>
-          <Fade bottom duration={2000} delay={400}>
+          <Fade top duration={2000} delay={400}>
             <div className="hero__cta">
               <a href="#!" className="primary__btn">
                 Get Started

@@ -1,44 +1,52 @@
 import School from "../assets/images/school.svg";
 import Books from "../assets/images/books.svg";
 import Flag from "../assets/images/school.svg";
+import Fade from "react-reveal/Fade";
 
 const GoalsSection = () => {
   return (
     <div className="goals__wrapper">
-      <h1>Our Goal</h1>
+      <Fade top duration={2000}>
+        <h1>Our Goal</h1>
+      </Fade>
       <div className="goals__grid">
-        <div className="goal">
-          <img src={School} alt="School" />
-          <h3>Education for Everyone</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
-            provident ducimus quos animi error tempora velit, id at! Tempore
-            earum omnis architecto vitae ratione deleniti id laborum doloremque
-            temporibus.
-          </p>
-        </div>
+        <Fade top duration={2000} delay={200}>
+          <div className="goal">
+            <img src={School} alt="School" />
+            <h3>Education for Everyone</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
+              provident ducimus quos animi error tempora velit, id at! Tempore
+              earum omnis architecto vitae ratione deleniti id laborum
+              doloremque temporibus.
+            </p>
+          </div>
+        </Fade>
 
-        <div className="goal">
-          <img src={Books} alt="School" />
-          <h3>Free Books to learn</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
-            provident ducimus quos animi error tempora velit, id at! Tempore
-            earum omnis architecto vitae ratione deleniti id laborum doloremque
-            temporibus.
-          </p>
-        </div>
-
-        <div className="goal">
-          <img src={Flag} alt="School" />
-          <h3>Sense of Equality</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
-            provident ducimus quos animi error tempora velit, id at! Tempore
-            earum omnis architecto vitae ratione deleniti id laborum doloremque
-            temporibus.
-          </p>
-        </div>
+        <Fade top duration={2000} delay={400}>
+          <div className="goal">
+            <img src={Books} alt="School" />
+            <h3>Free Books to learn</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
+              provident ducimus quos animi error tempora velit, id at! Tempore
+              earum omnis architecto vitae ratione deleniti id laborum
+              doloremque temporibus.
+            </p>
+          </div>
+        </Fade>
+        <Fade top duration={2000} delay={600}>
+          <div className="goal">
+            <img src={Flag} alt="School" />
+            <h3>Sense of Equality</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
+              provident ducimus quos animi error tempora velit, id at! Tempore
+              earum omnis architecto vitae ratione deleniti id laborum
+              doloremque temporibus.
+            </p>
+          </div>
+        </Fade>
       </div>
     </div>
   );
