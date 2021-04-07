@@ -1,6 +1,7 @@
 import Zach from "../assets/images/zach.jpg";
 import Ben from "../assets/images/ben.jpg";
 import BenWicks from "../assets/images/ben-wicks.jpg";
+import Fade from "react-reveal/Fade";
 
 const InfoSection = () => {
   return (
@@ -8,43 +9,61 @@ const InfoSection = () => {
       <div className="container">
         <div className="info">
           <div className="info__leftContainer text">
-            <h1>Our History</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              ratione molestias labore saepe ab temporibus veritatis, tempore
-              voluptatum praesentium quos.
-            </p>
+            <Fade top duration={2000}>
+              <h1>Our History</h1>
+            </Fade>
+            <Fade top duration={2000} delay={200}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus ratione molestias labore saepe ab temporibus veritatis,
+                tempore voluptatum praesentium quos.
+              </p>
+            </Fade>
           </div>
           <div className="info__rightContainer">
-            <img src={Zach} alt="Zach" />
+            <Fade left duration={2000} delay={400}>
+              <img src={Zach} alt="Zach" />
+            </Fade>
           </div>
         </div>
 
         <div className="info">
           <div className="info__leftContainer">
-            <img src={Ben} alt="Ben" />
+            <Fade right duration={2000}>
+              <img src={Ben} alt="Ben" />
+            </Fade>
           </div>
           <div className="info__rightContainer text">
-            <h1>Our Present</h1>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reiciendis placeat laboriosam libero ipsum molestiae magni rerum
-              nihil corporis, harum inventore.
-            </p>
+            <Fade top duration={2000} delay={200}>
+              <h1>Our Present</h1>
+            </Fade>
+            <Fade top duration={2000} delay={400}>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Reiciendis placeat laboriosam libero ipsum molestiae magni rerum
+                nihil corporis, harum inventore.
+              </p>
+            </Fade>
           </div>
         </div>
 
         <div className="info">
           <div className="info__leftContainer text">
-            <h1>Our Future</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              ipsam in provident consectetur placeat, molestiae aliquam quas
-              similique iure reiciendis!
-            </p>
+            <Fade top duration={2000}>
+              <h1>Our Future</h1>
+            </Fade>
+            <Fade top duration={2000} delay={200}>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid ipsam in provident consectetur placeat, molestiae
+                aliquam quas similique iure reiciendis!
+              </p>
+            </Fade>
           </div>
           <div className="info__rightContainer">
-            <img src={BenWicks} alt="Ben Wicks" />
+            <Fade right duration={2000} delay={400}>
+              <img src={BenWicks} alt="Ben Wicks" />
+            </Fade>
           </div>
         </div>
       </div>
