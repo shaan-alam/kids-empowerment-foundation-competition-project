@@ -314,6 +314,26 @@ nav ul li a {
   transition: all 0.4s;
 }
 
+.help__button {
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 2rem;
+  transition: all 0.4s;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+  padding: 0.5rem 0.8rem;
+  background: #ffe399;
+  font-weight: 500;
+  font-size: small;
+}
+
+.help__button:hover {
+  background: #ffb800;
+  color: #fff;
+}
+
 .goals__wrapper {
   height: auto;
   width: 100%;
@@ -361,7 +381,7 @@ nav ul li a {
 }
 
 .info__wrapper {
-  height: 200vh;
+  height: auto;
   width: 100%;
   background: url("../images/yellow-bg.svg") no-repeat;
   background-size: cover;

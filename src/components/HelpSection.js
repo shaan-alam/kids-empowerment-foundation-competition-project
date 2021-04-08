@@ -23,6 +23,11 @@ const HelpSection = () => {
                 obcaecati. Exercitationem maxime consequatur at.
               </p>
             </Fade>
+            <Fade top duration={2000} delay={250}>
+              <a href="#!" className="help__button">
+                Click here to volunteer
+              </a>
+            </Fade>
           </div>
           <div className="help__blockRightContainer">
             <Fade left duration={2000} delay={400}>
@@ -49,6 +54,11 @@ const HelpSection = () => {
                 obcaecati. Exercitationem maxime consequatur at.
               </p>
             </Fade>
+            <Fade top duration={2000} delay={250}>
+              <a href="#!" className="help__button">
+                Click here to donate books
+              </a>
+            </Fade>
           </div>
         </div>
 
@@ -64,6 +74,11 @@ const HelpSection = () => {
                 voluptatibus aliquam accusantium totam eaque enim, doloribus
                 obcaecati. Exercitationem maxime consequatur at.
               </p>
+            </Fade>
+            <Fade top duration={2000} delay={250}>
+              <a href="#!" className="help__button">
+                Join our Awareness program
+              </a>
             </Fade>
           </div>
           <div className="help__blockRightContainer">
