@@ -493,6 +493,7 @@ nav ul li a {
   border: none;
   transition: all 0.4s;
   background: rgba(230, 230, 230, 0.8);
+  width: 100%;
 }
 
 .login__wrapper .login__container .form__field input:focus {

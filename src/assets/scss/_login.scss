@@ -39,6 +39,7 @@
       border: none;
       transition: all 0.4s;
       background: lighten($gray-color, 90%);
+      width: 100%;
 
       &:focus {
         outline: none;
