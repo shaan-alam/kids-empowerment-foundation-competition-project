@@ -26,8 +26,6 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    
-
 
     h1 {
       color: #fff;
@@ -52,6 +50,7 @@
     input,
     textarea {
       width: 100%;
+      font-family: $montserrat;
       padding: 1.3rem 1rem;
       border-radius: 2rem;
       border: 1px solid rgba(255, 255, 255, 0.5);

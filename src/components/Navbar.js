@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to="books-donators">Books Donators</Link>
           </li>
           <li>
-            <a href="#!">Contact</a>
+            <Link to="/contacts">Contact</Link>
           </li>
           {user?.uid != null ? (
             <li>

@@ -7,6 +7,7 @@ import "./assets/css/styles.css";
 import { Context } from "./Context/GlobalState";
 import Volunteers from "./components/Volunteers";
 import BooksDonators from "./components/BooksDonators";
+import Contacts from "./components/Contacts";
 
 function App() {
   const { isPageLoading } = useContext(Context);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/volunteers" component={Volunteers} />
         <Route path="/books-donators" component={BooksDonators} />
+        <Route path="/contacts" component={Contacts} />
       </Switch>
     </>
   );
