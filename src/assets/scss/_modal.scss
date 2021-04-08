@@ -21,11 +21,7 @@
     text-align: center;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 
-    h1 {
-      font-family: $montserrat;
-      font-size: 1.7rem;
-    }
-
+   
     .close__modal {
       position: absolute;
       top: 20px;
@@ -36,38 +32,6 @@
       color: #333;
     }
 
-    .primary__btn {
-      padding: 0.8rem 0;
-    }
-  }
-
-  .divider {
-    color: rgb(107, 107, 107);
-    font-weight: bold;
-    margin: 1.3rem 0;
-    font-family: $montserrat;
-  }
-
-  .modal__content .form__field {
-    margin: 1.3rem 0;
-
-    input {
-      border-radius: 1rem;
-      padding: 12px;
-      outline: none;
-      border: none;
-      transition: all 0.4s;
-      background: lighten($gray-color, 90%);
-
-      &:focus {
-        outline: none;
-        background: lighten($primary-color, 40%);
-      }
-    }
-  }
-
-  .primary__btn {
-    width: 100%;
-    margin-bottom: 2rem;
+    
   }
 }

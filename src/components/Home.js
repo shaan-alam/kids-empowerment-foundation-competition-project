@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import GoalsSection from "./GoalsSection";
 import InfoSection from "./InfoSection";
@@ -9,7 +8,6 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <GoalsSection />
       <InfoSection />

@@ -1,10 +1,11 @@
-import { useState } from "react";
-import LoginModal from "./LoginModal";
-import Modal from "./Modal";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import Avatar from "@material-ui/core/Avatar";
+import { Context } from "../Context/GlobalState";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [modal, setModal] = useState(false);
+  const { user, logout } = useContext(Context);
 
   const showNavbar = (e) => {
     e.preventDefault();
@@ -16,18 +17,6 @@ const Navbar = () => {
     e.preventDefault();
 
     setIsOpen(false);
-  };
-
-  const showModal = (e) => {
-    e.preventDefault();
-
-    setModal(true);
-  };
-
-  const hideModal = (e) => {
-    e.preventDefault();
-
-    setModal(false);
   };
 
   return (
@@ -45,7 +34,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#!">Home</a>
+            <Link to="/w">Home</Link>
           </li>
           <li>
             <a href="#!">Volunteer</a>
@@ -56,13 +45,26 @@ const Navbar = () => {
           <li>
             <a href="#!">Contact</a>
           </li>
-          <li>
-            <a href="#!" className="primary__btn" onClick={showModal}>
-              Login
-            </a>
-          </li>
+          {user?.uid != null ? (
+            <li>
+              <a href="#!" onClick={logout}>
+                Logout
+              </a>
+            </li>
+          ) : null}
+
+          {user?.uid != null ? (
+            <li>
+              <Avatar src={user.photoURL} alt={user.displayName} />
+            </li>
+          ) : (
+            <li>
+              <Link to="/login" className="primary__btn">
+                Login
+              </Link>
+            </li>
+          )}
         </ul>
-        {modal && <LoginModal hideModal={hideModal} />}
       </div>
     </nav>
   );
