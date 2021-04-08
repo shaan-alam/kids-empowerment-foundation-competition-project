@@ -122,6 +122,14 @@ nav ul li a {
   }
 }
 
+.loading__wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__wrapper {
   width: 100%;
   height: 90vh;
@@ -227,6 +235,7 @@ nav ul li a {
 }
 
 .modal__backdrop .modal__content {
+  z-index: 30;
   position: relative;
   background: #fff;
   border-radius: 1.8rem;
@@ -243,6 +252,77 @@ nav ul li a {
   text-decoration: none;
   font-size: 2rem;
   color: #333;
+}
+
+.modal__backdrop .modal__content h1,
+.modal__backdrop .modal__content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+}
+
+.modal__backdrop .modal__content .modal__content {
+  max-width: 400px;
+  padding: 2rem 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.145);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.modal__backdrop .modal__content .primary__btn {
+  padding: 0.8rem 0;
+}
+
+.modal__backdrop .modal__content .divider {
+  color: #6b6b6b;
+  font-weight: bold;
+  margin: 1.3rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modal__backdrop .modal__content .form__field {
+  margin: 1.3rem 0;
+}
+
+.modal__backdrop .modal__content .form__field select {
+  width: 100%;
+  padding: 1rem 12px;
+  border-radius: 1rem;
+  border: none;
+  background: rgba(230, 230, 230, 0.8);
+}
+
+.modal__backdrop .modal__content .form__field input,
+.modal__backdrop .modal__content .form__field textarea {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 1rem;
+  padding: 1rem 12px;
+  outline: none;
+  border: none;
+  transition: all 0.4s;
+  width: 100%;
+  background: rgba(230, 230, 230, 0.8);
+}
+
+.modal__backdrop .modal__content .form__field input:focus,
+.modal__backdrop .modal__content .form__field textarea:focus {
+  outline: none;
+  background: #fff1cc;
+}
+
+.modal__backdrop .modal__content .primary__btn {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.success__msg {
+  padding: 12px;
+  background: rgba(147, 254, 147, 0.768);
+  color: #001c00;
+  font-weight: bold;
+  font-size: small;
+  font-family: "Montserrat", sans-serif;
+  margin: 1rem 0;
+  border-radius: 1rem;
 }
 
 .primary__btn {
@@ -347,53 +427,6 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.login__wrapper h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
-}
-
-.login__wrapper .login__container {
-  max-width: 400px;
-  padding: 2rem 4rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.145);
-  border-radius: 1rem;
-  text-align: center;
-}
-
-.login__wrapper .primary__btn {
-  padding: 0.8rem 0;
-}
-
-.login__wrapper .divider {
-  color: #6b6b6b;
-  font-weight: bold;
-  margin: 1.3rem 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-.login__wrapper .login__container .form__field {
-  margin: 1.3rem 0;
-}
-
-.login__wrapper .login__container .form__field input {
-  border-radius: 1rem;
-  padding: 12px;
-  outline: none;
-  border: none;
-  transition: all 0.4s;
-  background: rgba(230, 230, 230, 0.8);
-}
-
-.login__wrapper .login__container .form__field input:focus {
-  outline: none;
-  background: #fff1cc;
-}
-
-.login__wrapper .primary__btn {
-  width: 100%;
-  margin-bottom: 2rem;
 }
 
 .info__wrapper {

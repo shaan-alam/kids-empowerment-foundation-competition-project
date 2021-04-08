@@ -12,6 +12,8 @@ export default function Provider({ children }) {
   const history = useHistory();
 
   useEffect(() => {
+    setIsPageLoading(true);
+
     auth.onAuthStateChanged((user) => {
       console.log(user);
 
@@ -25,8 +27,12 @@ export default function Provider({ children }) {
             setUser(user);
           })
           .then(() => {
+            setIsPageLoading(false);
+
             history.push("/");
           });
+      } else {
+        setIsPageLoading(false);
       }
     });
   }, [history]);
@@ -43,14 +49,14 @@ export default function Provider({ children }) {
           email: result.user.email,
         };
 
-        setUser(user);
-
         // Saving data of the user in the database
         db.collection("users")
           .add(user)
           .then(() => {
+            setUser(user);
+          })
+          .then(() => {
             disableLoading();
-
             history.push("/");
           });
       })
@@ -72,7 +78,15 @@ export default function Provider({ children }) {
       .catch((err) => console.log(err.message));
   };
 
-  const value = { user, setUser, login, err, logout };
+  const value = {
+    user,
+    setUser,
+    login,
+    err,
+    logout,
+    isPageLoading,
+    setIsPageLoading,
+  };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }

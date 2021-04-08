@@ -14,6 +14,7 @@
   align-items: center;
 
   .modal__content {
+    z-index: 30;
     position: relative;
     background: #fff;
     border-radius: 1.8rem;
@@ -21,7 +22,6 @@
     text-align: center;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 
-   
     .close__modal {
       position: absolute;
       top: 20px;
@@ -32,6 +32,74 @@
       color: #333;
     }
 
-    
+    h1,
+    h2 {
+      font-family: $montserrat;
+      font-size: 1.7rem;
+    }
+
+    .modal__content {
+      max-width: 400px;
+      padding: 2rem 4rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.145);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .primary__btn {
+      padding: 0.8rem 0;
+    }
+
+    .divider {
+      color: rgb(107, 107, 107);
+      font-weight: bold;
+      margin: 1.3rem 0;
+      font-family: $montserrat;
+    }
+
+    .form__field {
+      margin: 1.3rem 0;
+
+      select {
+        width: 100%;
+        padding: 1rem 12px;
+        border-radius: 1rem;
+        border: none;
+        background: lighten($gray-color, 90%);
+      }
+
+      input,
+      textarea {
+        font-family: $montserrat;
+        border-radius: 1rem;
+        padding: 1rem 12px;
+        outline: none;
+        border: none;
+        transition: all 0.4s;
+        width: 100%;
+        background: lighten($gray-color, 90%);
+
+        &:focus {
+          outline: none;
+          background: lighten($primary-color, 40%);
+        }
+      }
+    }
+
+    .primary__btn {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
+}
+
+.success__msg {
+  padding: 12px;
+  background: lighten(rgba(1, 196, 1, 0.768), 40%);
+  color: darken(rgb(2, 179, 2), 30%);
+  font-weight: bold;
+  font-size: small;
+  font-family: $montserrat;
+  margin: 1rem 0;
+  border-radius: 1rem;
 }

@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Volunteering from "../assets/images/volunteering.jpg";
 import Donation from "../assets/images/donation.jpg";
 import Awareness from "../assets/images/awareness.jpg";
 import Fade from "react-reveal/Fade";
+import VoulunteeringModal from "./VolunteeringModal";
 
 const HelpSection = () => {
+  const [volunteer, setVolunteer] = useState(false);
+
   return (
     <div className="help__wrapper">
       <div className="container">
@@ -24,10 +28,15 @@ const HelpSection = () => {
               </p>
             </Fade>
             <Fade top duration={2000} delay={250}>
-              <a href="#!" className="help__button">
+              <a
+                href="#!"
+                className="help__button"
+                onClick={() => setVolunteer(true)}
+              >
                 Click here to volunteer
               </a>
             </Fade>
+            {volunteer && <VoulunteeringModal setVolunteer={setVolunteer} />}
           </div>
           <div className="help__blockRightContainer">
             <Fade left duration={2000} delay={400}>
