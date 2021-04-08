@@ -24,7 +24,7 @@ const VoulunteeringModal = ({ setVolunteer }) => {
       setName(user.displayName);
       setEmail(user.email);
     }
-  }, [name, email]);
+  }, [name, email, user.displayName, user.email]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();

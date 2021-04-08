@@ -24,7 +24,7 @@ const Login = () => {
     if (!user) {
       history.push("/");
     }
-  }, []);
+  }, [history, user]);
 
   return (
     <div className="login__wrapper">

@@ -55,8 +55,11 @@ nav {
           display: none;
         }
 
-
-        li a  {
+        li {
+          a {
+            color: #fff;
+            display: block;
+          }
           display: block;
         }
       }

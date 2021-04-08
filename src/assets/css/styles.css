@@ -92,7 +92,11 @@ nav ul .bars {
   nav ul.visible .bars {
     display: none;
   }
+  nav ul.visible li {
+    display: block;
+  }
   nav ul.visible li a {
+    color: #fff;
     display: block;
   }
 }
