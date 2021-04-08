@@ -1,0 +1,29 @@
+.volunteers__wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    font-family: $montserrat;
+    margin: 0 0 2rem 0;
+  }
+
+  table {
+    border: 1px solid #000;
+    padding: 1rem;
+    text-align: center;
+
+    thead td {
+      font-weight: bold;
+      font-family: $montserrat;
+    }
+
+    td {
+      font-family: $montserrat;
+      padding: 0.8rem 2rem;
+    }
+  }
+}

@@ -881,4 +881,34 @@ footer .footer__gridRightContainer p {
     font-size: small;
   }
 }
+
+.volunteers__wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.volunteers__wrapper h3 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 2rem 0;
+}
+
+.volunteers__wrapper table {
+  border: 1px solid #000;
+  padding: 1rem;
+  text-align: center;
+}
+
+.volunteers__wrapper table thead td {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.volunteers__wrapper table td {
+  font-family: "Montserrat", sans-serif;
+  padding: 0.8rem 2rem;
+}
 /*# sourceMappingURL=styles.css.map */
