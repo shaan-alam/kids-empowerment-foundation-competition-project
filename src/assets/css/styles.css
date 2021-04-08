@@ -458,6 +458,53 @@ nav ul li a {
   align-items: center;
 }
 
+.login__wrapper h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+}
+
+.login__wrapper .login__container {
+  max-width: 400px;
+  padding: 2rem 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.145);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.login__wrapper .primary__btn {
+  padding: 0.8rem 0;
+}
+
+.login__wrapper .divider {
+  color: #6b6b6b;
+  font-weight: bold;
+  margin: 1.3rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.login__wrapper .login__container .form__field {
+  margin: 1.3rem 0;
+}
+
+.login__wrapper .login__container .form__field input {
+  border-radius: 1rem;
+  padding: 12px;
+  outline: none;
+  border: none;
+  transition: all 0.4s;
+  background: rgba(230, 230, 230, 0.8);
+}
+
+.login__wrapper .login__container .form__field input:focus {
+  outline: none;
+  background: #fff1cc;
+}
+
+.login__wrapper .primary__btn {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .info__wrapper {
   height: auto;
   width: 100%;
