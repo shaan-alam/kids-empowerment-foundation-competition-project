@@ -22,8 +22,8 @@ const VoulunteeringModal = ({ setVolunteer }) => {
 
   useEffect(() => {
     if (user?.displayName && user?.email) {
-      setName(user.displayName);
-      setEmail(user.email);
+      setName(user?.displayName);
+      setEmail(user?.email);
     }
   }, [name, email, user.displayName, user.email]);
 

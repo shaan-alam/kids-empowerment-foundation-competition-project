@@ -55,7 +55,7 @@ const Navbar = () => {
 
           {user?.uid != null ? (
             <li>
-              <Avatar src={user.photoURL} alt={user.displayName} />
+              <Avatar src={user?.photoURL} alt={user?.displayName} />
             </li>
           ) : (
             <li>

@@ -8,7 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { login, user } = useContext(Context);
+  const { login, user, loginWithGoogle } = useContext(Context);
 
   const history = useHistory();
 
@@ -57,7 +57,7 @@ const Login = () => {
           {/* <small className="error">{}</small> */}
         </form>
         <div className="divider">OR</div>
-        <GoogleLoginButton />
+        <GoogleLoginButton onClick={loginWithGoogle} />
       </div>
     </div>
   );

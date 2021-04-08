@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { auth, db } from "../firebase";
 import { useHistory } from "react-router-dom";
+import firebase from "firebase";
 
 export const Context = createContext({});
 
@@ -18,19 +19,10 @@ export default function Provider({ children }) {
       console.log(user);
 
       if (user) {
-        db.collection("users")
-          .where("uid", "==", user.uid)
-          .get()
-          .then((snapshot) => {
-            const user = snapshot.docs.map((doc) => ({ ...doc.data() }))[0];
+        setIsPageLoading(false);
 
-            setUser(user);
-          })
-          .then(() => {
-            setIsPageLoading(false);
-
-            history.push("/");
-          });
+        setUser(user);
+        history.push("/");
       } else {
         setIsPageLoading(false);
       }
@@ -66,6 +58,20 @@ export default function Provider({ children }) {
       });
   };
 
+  // Login with Google function
+  const loginWithGoogle = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .then(() => {
+        history.push("/");
+      });
+  };
+
   // Logout function
   const logout = (e) => {
     e.preventDefault();
@@ -85,6 +91,7 @@ export default function Provider({ children }) {
     err,
     logout,
     isPageLoading,
+    loginWithGoogle,
     setIsPageLoading,
   };
 
