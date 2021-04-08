@@ -4,12 +4,13 @@ import { Context } from "../Context/GlobalState";
 import { db } from "../firebase";
 import { CircularProgress } from "@material-ui/core";
 
-const VoulunteeringModal = ({ setVolunteer }) => {
+const BooksDonatingModal = ({ setBooksDonationModal }) => {
   const { user } = useContext(Context);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [position, setPosition] = useState("Position A");
+  const [address, setAddress] = useState("");
   const [reason, setReason] = useState("");
+  const [numberOfBooks, setNumberOfBooks] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState(null);
 
@@ -24,30 +25,34 @@ const VoulunteeringModal = ({ setVolunteer }) => {
       setName(user.displayName);
       setEmail(user.email);
     }
-  }, [name, email]);
+  }, [name, email, user.email, user.displayName]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     setIsLoading(true);
 
-    const volunteer = {
+    const donator = {
       name,
       email,
-      position,
+      address,
+      numberOfBooks,
       reason,
     };
 
     // Save data to DB
-    db.collection("volunteers")
-      .add(volunteer)
+    db.collection("booksDonators")
+      .add(donator)
       .then(() => {
-        setSuccessMsg("You have been registered as a volunteer");
+        setSuccessMsg(
+          "You have been registered for Donating books. Check your email for further instructions."
+        );
 
         setName("");
         setEmail("");
         setReason("");
-        setPosition("");
+        setNumberOfBooks(0);
+        setAddress("");
 
         setIsLoading(false);
       });
@@ -59,11 +64,11 @@ const VoulunteeringModal = ({ setVolunteer }) => {
         <a
           href="#!"
           className="close__modal"
-          onClick={() => setVolunteer(false)}
+          onClick={() => setBooksDonationModal(false)}
         >
           &times;
         </a>
-        <h2>Register for volunteering</h2>
+        <h2>Register for Donating Books</h2>
 
         {successMsg && <div className="success__msg">{successMsg}</div>}
         <form onSubmit={handleFormSubmit}>
@@ -73,6 +78,7 @@ const VoulunteeringModal = ({ setVolunteer }) => {
               placeholder="Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="form__field">
@@ -85,26 +91,33 @@ const VoulunteeringModal = ({ setVolunteer }) => {
             />
           </div>
           <div className="form__field">
-            <select
-              onChange={(e) => setPosition(e.target.value)}
-              defaultValue="Position A"
-            >
-              <option value="Position A">Position A</option>
-              <option value="Position B">Position B</option>
-              <option value="Position C">Position C</option>
-              <option value="Position D">Position D</option>
-            </select>
+            <input
+              type="number"
+              placeholder="Your Address"
+              value={numberOfBooks}
+              onChange={(e) => setNumberOfBooks(+e.target.value)}
+              required
+            />
+          </div>
+          <div className="form__field">
+            <input
+              type="text"
+              placeholder="Your Address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+              required
+            />
           </div>
           <div className="form__field">
             <textarea
-              required
-              placeholder="Why do you want to volunteer in our organisation?"
+              placeholder="Why do you want to donat books to our organisation?"
               name=""
               id=""
               cols="30"
               rows="5"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
+              required
             ></textarea>
           </div>
           <button className="primary__btn">
@@ -120,4 +133,4 @@ const VoulunteeringModal = ({ setVolunteer }) => {
   );
 };
 
-export default VoulunteeringModal;
+export default BooksDonatingModal;
