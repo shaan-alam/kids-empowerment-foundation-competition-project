@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import { Context } from "../Context/GlobalState";
 import { db } from "../firebase";
 import { CircularProgress } from "@material-ui/core";
+import firebase from "firebase";
 
 const BooksDonatingModal = ({ setBooksDonationModal }) => {
   const { user } = useContext(Context);
@@ -38,6 +39,7 @@ const BooksDonatingModal = ({ setBooksDonationModal }) => {
       address,
       numberOfBooks,
       reason,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     };
 
     // Save data to DB
