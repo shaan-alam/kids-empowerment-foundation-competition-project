@@ -8,7 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const { login, user, loginWithGoogle } = useContext(Context);
+  const { login, user, loginWithGoogle,err } = useContext(Context);
 
   const history = useHistory();
 
@@ -18,6 +18,7 @@ const Login = () => {
     setIsLoading(true);
 
     login(email, password, () => setIsLoading(false));
+    
   };
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const Login = () => {
     <div className="login__wrapper">
       <div className="login__container">
         <h1>Login</h1>
+        {err &&  <small className="err">{err}</small>}
         <form onSubmit={handleLogin}>
           <div className="form__field">
             <input

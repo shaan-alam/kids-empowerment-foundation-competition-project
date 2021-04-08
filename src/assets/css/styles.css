@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+.err {
+  margin: 1rem 0;
+  margin-top: 2rem;
+  color: red;
+  font-family: "Montserrat", sans-serif;
+}
+
 ::selection {
   background-color: #ffb800;
   color: #fff;

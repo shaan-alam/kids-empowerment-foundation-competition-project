@@ -16,7 +16,6 @@ export default function Provider({ children }) {
     setIsPageLoading(true);
 
     auth.onAuthStateChanged((user) => {
-      console.log(user);
 
       if (user) {
         setIsPageLoading(false);
@@ -53,7 +52,7 @@ export default function Provider({ children }) {
           });
       })
       .catch((err) => {
-        console.log(err);
+        disableLoading();
         setError(err.message);
       });
   };
