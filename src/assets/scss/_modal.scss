@@ -21,6 +21,10 @@
     text-align: center;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 
+    @include medium {
+      padding: 10px;
+    }
+
     .close__modal {
       position: absolute;
       top: 20px;
@@ -35,6 +39,11 @@
     h2 {
       font-family: $montserrat;
       font-size: 1.7rem;
+      margin-top: 1.5rem;
+
+      @include medium {
+        font-size: 1rem;
+      }
     }
 
     .modal__content {
@@ -49,17 +58,14 @@
       padding: 0.8rem 0;
     }
 
-    .divider {
-      color: rgb(107, 107, 107);
-      font-weight: bold;
-      margin: 1.3rem 0;
-      font-family: $montserrat;
-    }
-
     .form__field {
       margin: 1.3rem 0;
 
       select {
+        @include medium {
+          width: 80%;
+        }
+
         width: 100%;
         padding: 1rem 12px;
         border-radius: 1rem;
@@ -78,6 +84,10 @@
         width: 100%;
         background: lighten($gray-color, 90%);
 
+        @include medium {
+          width: 80%;
+        }
+
         &:focus {
           outline: none;
           background: lighten($primary-color, 40%);
@@ -88,6 +98,10 @@
     .primary__btn {
       width: 100%;
       margin-bottom: 2rem;
+
+      @include medium {
+        width: 80%;
+      }
     }
   }
 }

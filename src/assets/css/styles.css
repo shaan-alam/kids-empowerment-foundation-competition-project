@@ -243,6 +243,12 @@ nav ul li a {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 500px) {
+  .modal__backdrop .modal__content {
+    padding: 10px;
+  }
+}
+
 .modal__backdrop .modal__content .close__modal {
   position: absolute;
   top: 20px;
@@ -257,6 +263,14 @@ nav ul li a {
 .modal__backdrop .modal__content h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.7rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .modal__backdrop .modal__content h1,
+  .modal__backdrop .modal__content h2 {
+    font-size: 1rem;
+  }
 }
 
 .modal__backdrop .modal__content .modal__content {
@@ -271,13 +285,6 @@ nav ul li a {
   padding: 0.8rem 0;
 }
 
-.modal__backdrop .modal__content .divider {
-  color: #6b6b6b;
-  font-weight: bold;
-  margin: 1.3rem 0;
-  font-family: "Montserrat", sans-serif;
-}
-
 .modal__backdrop .modal__content .form__field {
   margin: 1.3rem 0;
 }
@@ -288,6 +295,12 @@ nav ul li a {
   border-radius: 1rem;
   border: none;
   background: rgba(230, 230, 230, 0.8);
+}
+
+@media screen and (max-width: 500px) {
+  .modal__backdrop .modal__content .form__field select {
+    width: 80%;
+  }
 }
 
 .modal__backdrop .modal__content .form__field input,
@@ -302,6 +315,13 @@ nav ul li a {
   background: rgba(230, 230, 230, 0.8);
 }
 
+@media screen and (max-width: 500px) {
+  .modal__backdrop .modal__content .form__field input,
+  .modal__backdrop .modal__content .form__field textarea {
+    width: 80%;
+  }
+}
+
 .modal__backdrop .modal__content .form__field input:focus,
 .modal__backdrop .modal__content .form__field textarea:focus {
   outline: none;
@@ -311,6 +331,12 @@ nav ul li a {
 .modal__backdrop .modal__content .primary__btn {
   width: 100%;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .modal__backdrop .modal__content .primary__btn {
+    width: 80%;
+  }
 }
 
 .success__msg {
