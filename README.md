@@ -10,5 +10,5 @@
 
 ### Ways of logging in (Authentication)
 
-* Use `shaanalam369@gmail.com` as email and `shaanalam` as password for logging in
+* Use `shaanalam319@gmail.com` as email and `shaanalam` as password for logging in
 * Or login using google

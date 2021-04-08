@@ -31,7 +31,7 @@ export default function Provider({ children }) {
   // Login using email and password
   const login = (email, password, disableLoading) => {
     auth
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password)
       .then((result) => {
         const user = {
           uid: result.user.uid,
