@@ -16,7 +16,8 @@ const GoalsSection = () => {
             <h3>Education for Everyone</h3>
             <p>
               Our long-term goal is to let every child be exposed to learning
-              and education. We have volunteers as well
+              and education. We have volunteers who are ready to help and teach
+              rural area kids.
             </p>
           </div>
         </Fade>
@@ -26,10 +27,9 @@ const GoalsSection = () => {
             <img src={Books} alt="School" />
             <h3>Free Books to learn</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
-              provident ducimus quos animi error tempora velit, id at! Tempore
-              earum omnis architecto vitae ratione deleniti id laborum
-              doloremque temporibus.
+              We provide free books to rural area kids to learn and help them in
+              their education. We also make sure they get best quality education
+              possible.
             </p>
           </div>
         </Fade>
