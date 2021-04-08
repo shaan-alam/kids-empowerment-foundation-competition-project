@@ -1,7 +1,10 @@
 import { useState } from "react";
+import LoginModal from "./LoginModal";
+import Modal from "./Modal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const showNavbar = (e) => {
     e.preventDefault();
@@ -13,6 +16,18 @@ const Navbar = () => {
     e.preventDefault();
 
     setIsOpen(false);
+  };
+
+  const showModal = (e) => {
+    e.preventDefault();
+
+    setModal(true);
+  };
+
+  const hideModal = (e) => {
+    e.preventDefault();
+
+    setModal(false);
   };
 
   return (
@@ -33,7 +48,7 @@ const Navbar = () => {
             <a href="#!">Home</a>
           </li>
           <li>
-            <a href="#!">About</a>
+            <a href="#!">Volunteer</a>
           </li>
           <li>
             <a href="#!">Services</a>
@@ -41,7 +56,13 @@ const Navbar = () => {
           <li>
             <a href="#!">Contact</a>
           </li>
+          <li>
+            <a href="#!" className="primary__btn" onClick={showModal}>
+              Login
+            </a>
+          </li>
         </ul>
+        {modal && <LoginModal hideModal={hideModal} />}
       </div>
     </nav>
   );

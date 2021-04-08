@@ -15,10 +15,8 @@ const GoalsSection = () => {
             <img src={School} alt="School" />
             <h3>Education for Everyone</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. A dolor
-              provident ducimus quos animi error tempora velit, id at! Tempore
-              earum omnis architecto vitae ratione deleniti id laborum
-              doloremque temporibus.
+              Our long-term goal is to let every child be exposed to learning
+              and education. We have volunteers as well
             </p>
           </div>
         </Fade>

@@ -34,8 +34,15 @@
 }
 
 nav {
-  padding: 1.8rem;
   width: 100%;
+}
+
+nav .container {
+  padding: 1.8rem;
+}
+
+nav .container .primary__btn {
+  padding: 8px 20px;
 }
 
 nav ul {
@@ -85,6 +92,9 @@ nav ul .bars {
   nav ul.visible .bars {
     display: none;
   }
+  nav ul.visible li a {
+    display: block;
+  }
 }
 
 nav ul li a {
@@ -96,7 +106,7 @@ nav ul li a {
 
 @media screen and (max-width: 500px) {
   nav ul li a {
-    color: #fff;
+    display: none;
   }
   nav ul li a:hover {
     color: #fff;
@@ -169,6 +179,10 @@ nav ul li a {
   }
 }
 
+.hero__wrapperRight {
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 860px) {
   .hero__wrapperRight {
     display: none;
@@ -194,6 +208,80 @@ nav ul li a {
     display: block;
     margin-top: 1rem;
   }
+}
+
+.modal__backdrop {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__backdrop .modal__content {
+  position: relative;
+  background: #fff;
+  border-radius: 1.8rem;
+  padding: 2rem 4rem;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.modal__backdrop .modal__content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+}
+
+.modal__backdrop .modal__content .close__modal {
+  position: absolute;
+  top: 20px;
+  font-weight: bold;
+  right: 20px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #333;
+}
+
+.modal__backdrop .modal__content .primary__btn {
+  padding: 0.8rem 0;
+}
+
+.modal__backdrop .divider {
+  color: #6b6b6b;
+  font-weight: bold;
+  margin: 1.3rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modal__backdrop .modal__content .form__field {
+  margin: 1.3rem 0;
+}
+
+.modal__backdrop .modal__content .form__field input {
+  border-radius: 1rem;
+  padding: 12px;
+  outline: none;
+  border: none;
+  transition: all 0.4s;
+  background: rgba(230, 230, 230, 0.8);
+}
+
+.modal__backdrop .modal__content .form__field input:focus {
+  outline: none;
+  background: #fff1cc;
+}
+
+.modal__backdrop .primary__btn {
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .primary__btn {

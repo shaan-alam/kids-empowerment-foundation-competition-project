@@ -54,6 +54,8 @@
 
   // Hero right disappears on smaller screens
   &Right {
+    justify-content: flex-end;
+
     @include large {
       display: none;
       flex: 0;

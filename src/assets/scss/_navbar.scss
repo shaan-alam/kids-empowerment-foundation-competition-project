@@ -1,6 +1,13 @@
 nav {
-  padding: 1.8rem;
   width: 100%;
+
+  .container {
+    padding: 1.8rem;
+
+    .primary__btn {
+      padding: 8px 20px;
+    }
+  }
 
   ul {
     list-style: none;
@@ -47,6 +54,11 @@ nav {
         .bars {
           display: none;
         }
+
+
+        li a  {
+          display: block;
+        }
       }
     }
 
@@ -57,7 +69,7 @@ nav {
       font-family: $montserrat;
 
       @include medium {
-        color: #fff;
+        display: none;
 
         &:hover {
           color: #fff;
