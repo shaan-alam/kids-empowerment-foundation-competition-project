@@ -1,17 +1,18 @@
 import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDwieFSVfKyZOaJr_r6JQIBo5GE9bBJu5I",
-  authDomain: "kids-empowerment-foundation.firebaseapp.com",
-  projectId: "kids-empowerment-foundation",
-  storageBucket: "kids-empowerment-foundation.appspot.com",
-  messagingSenderId: "627566589826",
-  appId: "1:627566589826:web:292a39d791ae324fed019b",
-  measurementId: "G-Z051XGZ9LY",
+  apiKey: "AIzaSyA8RSHlSjpVlb1kEISbVBZiuZFd9wH7SBk",
+  authDomain: "kids-foundation-715b7.firebaseapp.com",
+  projectId: "kids-foundation-715b7",
+  storageBucket: "kids-foundation-715b7.appspot.com",
+  messagingSenderId: "138761196208",
+  appId: "1:138761196208:web:8f1ad1625e8a1116bf6175",
+  measurementId: "G-EQEC0SC7RW"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export const auth = firebaseApp.auth();
+export const auth = firebase.auth();
 export const db = firebase.firestore();
